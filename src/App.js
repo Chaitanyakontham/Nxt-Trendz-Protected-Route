@@ -11,9 +11,9 @@ import './App.css'
 const App = () => (
   <Switch>
     <Route exact path="/login" component={LoginForm} />
-    <Route exact path="/" component={Home} />
-    <Route exact path="/products" component={Products} />
-    <Route exact path="/cart" component={Cart} />
+    <ProtectedRoute exact path="/" component={Home} />
+    <ProtectedRoute exact path="/products" component={Products} />
+    <ProtectedRoute exact path="/cart" component={Cart} />
     <Route component={NotFound} />
   </Switch>
 )
